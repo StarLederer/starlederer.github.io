@@ -1,0 +1,174 @@
+*,::before,::after{--un-rotate:0;--un-rotate-x:0;--un-rotate-y:0;--un-rotate-z:0;--un-scale-x:1;--un-scale-y:1;--un-scale-z:1;--un-skew-x:0;--un-skew-y:0;--un-translate-x:0;--un-translate-y:0;--un-translate-z:0;--un-ring-offset-shadow:0 0 rgba(0,0,0,0);--un-ring-shadow:0 0 rgba(0,0,0,0);--un-shadow-inset: ;--un-shadow:0 0 rgba(0,0,0,0);--un-ring-inset: ;--un-ring-offset-width:0px;--un-ring-offset-color:#fff;--un-ring-width:0px;--un-ring-color:rgba(147,197,253,0.5);}::backdrop{--un-rotate:0;--un-rotate-x:0;--un-rotate-y:0;--un-rotate-z:0;--un-scale-x:1;--un-scale-y:1;--un-scale-z:1;--un-skew-x:0;--un-skew-y:0;--un-translate-x:0;--un-translate-y:0;--un-translate-z:0;--un-ring-offset-shadow:0 0 rgba(0,0,0,0);--un-ring-shadow:0 0 rgba(0,0,0,0);--un-shadow-inset: ;--un-shadow:0 0 rgba(0,0,0,0);--un-ring-inset: ;--un-ring-offset-width:0px;--un-ring-offset-color:#fff;--un-ring-width:0px;--un-ring-color:rgba(147,197,253,0.5);}
+      * {
+        padding: 0;
+        margin: 0;
+
+        color: inherit;
+        background: none;
+        border: none;
+        font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+        font-size: inherit;
+        line-height: 1;
+
+        color-scheme: light dark;
+        box-sizing: border-box;
+        cursor: inherit;
+      }
+
+      :root {
+        font-size: 16px;
+
+        font-synthesis: none;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        -webkit-text-size-adjust: 100%;
+
+        cursor: default;
+
+        user-select: none;
+        -webkit-user-select: none;
+      }
+    
+    :root {
+      --hue: 0;
+      --base-highlight: 10%;
+      --base-highlight-plus: 20%;
+      --highlight: 0%;
+
+      
+    --col-abs-s: 0%;
+    --col-abs-l: 0%;
+    --col-abs-a: 100%;
+  
+
+    --col-on-abs-0-s: 10%;
+    --col-on-abs-0-l: 100%;
+    --col-on-abs-0-a: 100%;
+  
+
+    --col-def-s: 10%;
+    --col-def-l: 5%;
+    --col-def-a: 100%;
+  
+
+    --col-on-def-0-s: 10%;
+    --col-on-def-0-l: 90%;
+    --col-on-def-0-a: 100%;
+  
+
+    --col-on-def-1-s: 20%;
+    --col-on-def-1-l: 80%;
+    --col-on-def-1-a: 100%;
+  
+
+    --col-on-def-2-s: 20%;
+    --col-on-def-2-l: 60%;
+    --col-on-def-2-a: 100%;
+  
+
+    --col-on-def-3-s: 20%;
+    --col-on-def-3-l: 40%;
+    --col-on-def-3-a: 100%;
+  
+
+    --col-on-def-4-s: 10%;
+    --col-on-def-4-l: 10%;
+    --col-on-def-4-a: 100%;
+  
+
+    --col-srf-s: 40%;
+    --col-srf-l: 20%;
+    --col-srf-a: 10%;
+  
+
+    --col-on-srf-0-s: 100%;
+    --col-on-srf-0-l: 80%;
+    --col-on-srf-0-a: 100%;
+  
+
+    --col-on-srf-1-s: 40%;
+    --col-on-srf-1-l: 60%;
+    --col-on-srf-1-a: 100%;
+  
+
+    --col-srf2-s: 40%;
+    --col-srf2-l: 40%;
+    --col-srf2-a: 20%;
+  
+
+    --col-on-srf2-0-s: 20%;
+    --col-on-srf2-0-l: 80%;
+    --col-on-srf2-0-a: 100%;
+  
+
+    --col-int-s: 100%;
+    --col-int-l: 60%;
+    --col-int-a: 100%;
+  
+
+    --col-on-int-0-s: 100%;
+    --col-on-int-0-l: 10%;
+    --col-on-int-0-a: 100%;
+  
+
+    --col-int2-s: 80%;
+    --col-int2-l: 40%;
+    --col-int2-a: 40%;
+  
+
+    --col-on-int2-0-s: 100%;
+    --col-on-int2-0-l: 80%;
+    --col-on-int2-0-a: 100%;
+  
+
+    --col-int3-s: 60%;
+    --col-int3-l: 60%;
+    --col-int3-a: 10%;
+  
+
+    --col-on-int3-0-s: 10%;
+    --col-on-int3-0-l: 80%;
+    --col-on-int3-0-a: 100%;
+  
+
+    --col-int4-s: 20%;
+    --col-int4-l: 20%;
+    --col-int4-a: 20%;
+  
+
+    --col-on-int4-0-s: 10%;
+    --col-on-int4-0-l: 80%;
+    --col-on-int4-0-a: 100%;
+  
+    }
+
+    @media (prefers-color-scheme: light) {
+      :root {
+        --base-highlight: -10%;
+        --base-highlight-plus: -20%;
+
+        --col-abs-l: 100%;
+--col-on-abs-0-l: 0%;
+--col-def-l: 95%;
+--col-on-def-0-l: 10%;
+--col-on-def-1-l: 20%;
+--col-on-def-2-l: 40%;
+--col-on-def-3-l: 60%;
+--col-on-def-4-l: 90%;
+--col-srf-l: 80%;
+--col-on-srf-0-l: 20%;
+--col-on-srf-1-l: 40%;
+--col-srf2-l: 60%;
+--col-on-srf2-0-l: 20%;
+--col-int-l: 60%;
+--col-on-int-0-l: 10%;
+--col-int2-s: 90%;--col-int2-l: 60%;
+--col-on-int2-0-l: 20%;
+--col-int3-l: 40%;
+--col-on-int3-0-l: 20%;
+--col-int4-l: 80%;
+--col-on-int4-0-l: 20%;
+      }
+    }
+  .block{display:block;}.rounded-full{border-radius:9999px;}.font-bold{font-weight:700;}.font-semibold{font-weight:600;}.text-center{text-align:center;}.flex{display:flex;}.flex-col{flex-direction:column;}.flex-wrap{flex-wrap:wrap;}.grid{display:grid;}.justify-between{justify-content:space-between;}.items-start{align-items:flex-start;}.items-end{align-items:flex-end;}.bg-def{background:hsla(var(--hue), var(--col-def-s), var(--col-def-l), var(--col-def-a));;--fg0:hsla(var(--hue), var(--col-on-def-0-s), var(--col-on-def-0-l), var(--col-on-def-0-a));;--fg1:hsla(var(--hue), var(--col-on-def-1-s), var(--col-on-def-1-l), var(--col-on-def-1-a));;--fg2:hsla(var(--hue), var(--col-on-def-2-s), var(--col-on-def-2-l), var(--col-on-def-2-a));;--fg3:hsla(var(--hue), var(--col-on-def-3-s), var(--col-on-def-3-l), var(--col-on-def-3-a));;--fg4:hsla(var(--hue), var(--col-on-def-4-s), var(--col-on-def-4-l), var(--col-on-def-4-a));;color:var(--fg0);}.bg-int{background:hsl(var(--hue), var(--col-int-s), calc(var(--col-int-l) + var(--highlight)), var(--col-int-a));;--fg0:hsl(var(--hue), var(--col-on-int-0-s), calc(var(--col-on-int-0-l) + var(--highlight)), var(--col-on-int-0-a));;color:var(--fg0);}.bg-srf2{background:hsla(var(--hue), var(--col-srf2-s), var(--col-srf2-l), var(--col-srf2-a));;--fg0:hsla(var(--hue), var(--col-on-srf2-0-s), var(--col-on-srf2-0-l), var(--col-on-srf2-0-a));;color:var(--fg0);}.text-fg-0{color:var(--fg0);}.text-fg-1{color:var(--fg1);}.text-fg-2{color:var(--fg2);}.text-fg-3{color:var(--fg3);}.pd-m0{padding:1rem;}.pd-s\+\+{padding:0.8rem;}.mg-i-m{margin-inline:5rem;}.mg-i-s{margin-inline:0.5rem;}.mg-b-m--{margin-block:2rem;}.mg-be-m0{margin-block-end:1rem;}.gap-m--{gap:2rem;}.gap-m0{gap:1rem;}.gap-s{gap:0.5rem;}.gap-s-{gap:0.4rem;}.gap-s--{gap:0.2rem;}.gap-s\+\+{gap:0.8rem;}:root{font-size:14px}*{font-family:Assistant,sans-serif}body{--hue: 45}body>section{scroll-snap-align:start;min-height:100vh}h1,h2,h3,.font-fancy{font-family:Yeseva One,cursive}h1{font-size:3rem}h2{font-size:1.2rem}
