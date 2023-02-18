@@ -34,7 +34,7 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           message: "Deploy sponsors"
-          add: "www"
+          add: "www/sponsors"
 
-      - run: git subtree push --prefix dist origin gh-pages
+      - run: git subtree push --prefix www origin www
 
