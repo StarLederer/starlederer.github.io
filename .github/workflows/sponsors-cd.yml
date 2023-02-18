@@ -19,13 +19,13 @@ jobs:
         with:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Install deps
+      - uses: workflow/nix-shell-action@v3
         working-directory: ./sponsors
-        run: nix develop --command "ls"
-
-      - name: Build
-        working-directory: ./sponsors
-        run: nix develop --command "pnpm run build"
+        with:
+          script: |
+            ls
+            pnpm -v
+            ls
 
       - run: ls
       - run: ls sponsors
