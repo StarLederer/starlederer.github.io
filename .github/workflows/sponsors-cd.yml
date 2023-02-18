@@ -22,6 +22,11 @@ jobs:
       - uses: rrbutani/use-nix-shell-action@v1
         with:
           devShell: ./sponsors#
+          exportEnv: false
+          clearEnvForScript: true
+          script: |
+            pnpm i
+            pnpm run build
 
       - run: pnpm i
       - run: pnpm run build
