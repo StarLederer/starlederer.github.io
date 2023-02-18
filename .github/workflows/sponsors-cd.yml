@@ -20,8 +20,8 @@ jobs:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: workflow/nix-shell-action@v3
-        working-directory: ./sponsors
         with:
+          working-directory: ./sponsors
           script: |
             ls
             pnpm -v
