@@ -22,7 +22,7 @@ jobs:
 
       - name: Build
         working-directory: ./sponsors
-      - run: |
+        run: |
           nix develop
           pnpm i
 
