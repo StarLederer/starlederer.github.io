@@ -20,14 +20,10 @@ jobs:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: rrbutani/use-nix-shell-action@v1
-        env:
-          SPONSORKIT_GITHUB_TOKEN: ${{ secrets.PROFILE_TOKEN }}
-          SPONSORKIT_GITHUB_LOGIN: StarLederer
         with:
           devShell: ./sponsors#
           exportEnv: false
           script: |
-            echo $SPONSORKIT_GITHUB_LOGIN
             export SPONSORKIT_GITHUB_TOKEN=${{ secrets.PROFILE_TOKEN }}
             export SPONSORKIT_GITHUB_LOGIN=StarLederer
             cd sponsors
