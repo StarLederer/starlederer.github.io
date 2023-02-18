@@ -33,7 +33,8 @@ jobs:
       - name: Commit
         uses: EndBug/add-and-commit@v9
         with:
-          message: "Deploy sponsors"
+          push: false
+          message: "Deploy"
           add: "www/sponsors"
 
       - run: git subtree push --prefix www origin www
