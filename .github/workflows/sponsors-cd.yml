@@ -30,5 +30,11 @@ jobs:
             pnpm i
             pnpm run build
 
-      - run: ls www/sponsors
+      - name: Commit
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "Deploy sponsors"
+          add: "www"
+
+      - run: git subtree push --prefix dist origin gh-pages
 
