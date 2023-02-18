@@ -22,7 +22,13 @@ jobs:
 
       - name: Build
         working-directory: ./sponsors
-        run: |
-          nix develop
-          pnpm i
+        run: nix develop --command "pnpm i"
+
+      - name: Build
+        working-directory: ./sponsors
+        run: nix develop --command "pnpm run build"
+
+      - run: ls
+      - run: ls sponsors
+      - run: ls www/sponsors
 
