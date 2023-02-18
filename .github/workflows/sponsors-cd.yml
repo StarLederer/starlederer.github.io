@@ -21,7 +21,7 @@ jobs:
 
       - uses: rrbutani/use-nix-shell-action@v1
         with:
-          file: ./sponsors/flae.nix
+          file: ./sponsors/flake.nix
 
       - run: ls
       - run: pnpm -v
