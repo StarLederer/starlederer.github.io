@@ -1,6 +1,6 @@
 name: Sponsors CD
 
-main:
+on:
   workflow_dispatch:
   schedule:
     - cron: '0 0 * * *'
@@ -8,7 +8,7 @@ main:
     branches: [ master ]
 
 jobs:
-  cd:
+  main:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
