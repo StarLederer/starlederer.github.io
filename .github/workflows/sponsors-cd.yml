@@ -37,4 +37,3 @@ jobs:
           git add www
           git commit -m "Deploy"
           git subtree push --prefix www origin www
-          git push
