@@ -13,7 +13,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          lfs: true
           fetch-depth: 0
           token: ${{ secrets.PROFILE_TOKEN }}
 
