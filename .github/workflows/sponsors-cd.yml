@@ -25,11 +25,9 @@ jobs:
           exportEnv: false
           clearEnvForScript: true
           script: |
+            cd sponsors
             pnpm i
             pnpm run build
-
-      - run: pnpm i
-      - run: pnpm run build
 
       - run: ls www/sponsors
 
