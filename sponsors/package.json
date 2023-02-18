@@ -1,8 +1,0 @@
-{
-  "scripts": {
-    "build": "sponsorkit -w=800"
-  },
-  "devDependencies": {
-    "sponsorkit": "^0.8.1"
-  }
-}
