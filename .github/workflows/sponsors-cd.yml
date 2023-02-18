@@ -21,7 +21,7 @@ jobs:
 
       - uses: workflow/nix-shell-action@v3
         with:
-          working-directory: ./sponsors
+          flakes: .#
           script: |
             ls
             pnpm -v
