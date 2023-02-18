@@ -27,6 +27,9 @@ jobs:
           devShell: ./sponsors#
           exportEnv: false
           script: |
+            echo $SPONSORKIT_GITHUB_LOGIN
+            export SPONSORKIT_GITHUB_TOKEN=${{ secrets.PROFILE_TOKEN }}
+            export SPONSORKIT_GITHUB_LOGIN=StarLederer
             cd sponsors
             pnpm i
             pnpm run build
