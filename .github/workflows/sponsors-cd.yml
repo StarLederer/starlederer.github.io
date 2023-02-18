@@ -1,6 +1,6 @@
 name: Sponsors CD
 
-on:
+main:
   workflow_dispatch:
   schedule:
     - cron: '0 0 * * *'
@@ -23,8 +23,8 @@ jobs:
         with:
           devShell: ./sponsors#
 
-      - run: ls
-      - run: pnpm -v
-      - run: ls sponsors
+      - run: pnpm i
+      - run: pnpm run build
+
       - run: ls www/sponsors
 
