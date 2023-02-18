@@ -20,6 +20,8 @@ jobs:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: rrbutani/use-nix-shell-action@v1
+        with:
+          file: ./sponsors/flae.nix
 
       - run: ls
       - run: pnpm -v
