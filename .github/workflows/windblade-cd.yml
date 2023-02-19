@@ -6,7 +6,7 @@ on:
     branches: [ master ]
 
 jobs:
-  main:
+  checkout:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -20,6 +20,10 @@ jobs:
 
       - run: git clone https://github.com/StarLederer/windblade.git
 
+  build:
+    needs: checkout
+    runs-on: ubuntu-latest
+    steps:
       - name: Build
         uses: rrbutani/use-nix-shell-action@v1
         with:
@@ -34,12 +38,14 @@ jobs:
             pnpm i
             pnpm run build
 
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
       - name: Copy artifacts
-        uses: rrbutani/use-nix-shell-action@v1
-        with:
-          devShell: .#
-          exportEnv: false
-          script: rsync -r windblade/docs/dist/ www/windblade --delete
+      - run: |
+        rm -rf www/windblade
+        mv -f windblade/docs/dist www/windblade
 
       - uses: EndBug/add-and-commit@v9
         with:
