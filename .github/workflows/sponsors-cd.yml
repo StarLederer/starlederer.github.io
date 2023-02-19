@@ -37,5 +37,6 @@ jobs:
           add: www
           message: Deploy
           commit: --allow-empty
+          push: false
 
       - run: git subtree push --prefix www origin www
