@@ -18,6 +18,10 @@ jobs:
         with:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
 
+      - uses: rrbutani/use-nix-shell-action@v1
+        with:
+          packages: rsync
+
       - run: git clone https://github.com/StarLederer/windblade.git
 
       - uses: rrbutani/use-nix-shell-action@v1
