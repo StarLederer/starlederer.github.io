@@ -20,7 +20,8 @@ jobs:
         with:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: rrbutani/use-nix-shell-action@v1
+      - name: Build
+        uses: rrbutani/use-nix-shell-action@v1
         with:
           devShell: ./sponsors#
           exportEnv: false
@@ -31,9 +32,10 @@ jobs:
             pnpm i
             pnpm run build
 
-      - run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add www
-          git commit -m "Deploy"
-          git subtree push --prefix www origin www
+      - uses: EndBug/add-and-commit@v9
+        with:
+          add: www
+          message: Deploy
+          commit: --allow-empty
+
+      - run: git subtree push --prefix www origin www
