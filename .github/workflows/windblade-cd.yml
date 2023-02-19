@@ -27,6 +27,8 @@ jobs:
           exportEnv: false
           script: |
             cd windblade
+            ls
+            ls brand
             cd unocss
             pnpm i
             pnpm run build
