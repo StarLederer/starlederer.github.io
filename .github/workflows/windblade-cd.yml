@@ -19,10 +19,13 @@ jobs:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: rrbutani/use-nix-shell-action@v1
+        with:
+          devShell: .#
 
       - run: git clone https://github.com/StarLederer/windblade.git
 
-      - uses: rrbutani/use-nix-shell-action@v1
+      - name: Build
+        uses: rrbutani/use-nix-shell-action@v1
         with:
           devShell: ./windblade#
           exportEnv: false
