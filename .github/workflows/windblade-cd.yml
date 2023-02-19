@@ -33,7 +33,6 @@ jobs:
             cd ../docs
             pnpm i
             pnpm run build
-            rsync -r windblade/docs/dist/ www/windblade --delete
 
       - name: Copy artifacts
         uses: rrbutani/use-nix-shell-action@v1
