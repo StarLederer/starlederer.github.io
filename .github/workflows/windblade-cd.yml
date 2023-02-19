@@ -43,7 +43,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Copy artifacts
-      - run: |
+        run: |
           rm -rf www/windblade
           mv -f windblade/docs/dist www/windblade
 
