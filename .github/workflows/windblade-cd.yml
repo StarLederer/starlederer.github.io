@@ -18,12 +18,13 @@ jobs:
         with:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
 
+      - run: git clone https://github.com/StarLederer/windblade.git
+
       - uses: rrbutani/use-nix-shell-action@v1
         with:
-          devShell: ./sponsors#
+          devShell: ./windblade#
           exportEnv: false
           script: |
-            git clone https://github.com/StarLederer/windblade.git
             cd windblade
             cd unocss
             pnpm i
