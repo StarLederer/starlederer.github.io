@@ -6,7 +6,7 @@ on:
     branches: [ master ]
 
 jobs:
-  checkout:
+  main:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -20,10 +20,6 @@ jobs:
 
       - run: git clone https://github.com/StarLederer/windblade.git
 
-  build:
-    needs: checkout
-    runs-on: ubuntu-latest
-    steps:
       - name: Build
         uses: rrbutani/use-nix-shell-action@v1
         with:
@@ -38,10 +34,6 @@ jobs:
             pnpm i
             pnpm run build
 
-  publish:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
       - name: Copy artifacts
         run: |
           rm -rf www/windblade
