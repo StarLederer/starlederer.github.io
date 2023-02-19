@@ -35,9 +35,9 @@ jobs:
             cd ../..
             rsync -r windblade/docs/dist/ www/windblade --delete
 
-      - run: |
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git add www
-          git commit -m "Deploy"
-          git subtree push --prefix www origin www
+      - uses: EndBug/add-and-commit@v9
+        with:
+          add: www
+          message: Deploy
+
+      - run: git subtree push --prefix www origin www
