@@ -10,9 +10,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-          token: ${{ secrets.PROFILE_TOKEN }}
 
       - uses: cachix/install-nix-action@v19
         with:
@@ -46,3 +43,5 @@ jobs:
           add: www
           message: Deploy
           commit: --allow-empty
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
