@@ -40,8 +40,8 @@ jobs:
 
       - uses: EndBug/add-and-commit@v9
         with:
-          add: www
-          message: Deploy
+          add: windblade
+          message: Deploy windblade
           commit: --allow-empty
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
