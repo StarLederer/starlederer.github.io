@@ -538,7 +538,7 @@ Since windblade uses the same proportions for everything it is very easy to cust
 
 By default Windblade is configured with 10-unit-based proportions, however, Windblade also includes an option to use Tailwind and Material Design v3 proportions.
 
-\`\`\`
+\`\`\`uno-html
 <table class="border-collapse">
   <tr class="${we.tr}">
     <th class="${we.th}">Name</th>
@@ -988,7 +988,7 @@ Since windblade uses the same proportions for everything it is very easy to cust
 
 By default Windblade is configured with 10-unit-based proportions, however, Windblade also includes an option to use Tailwind and Material Design v3 proportions.
 
-\`\`\`
+\`\`\`uno-html
 <table class="border-collapse">
   <tr class="${ye.tr}">
     <th class="${ye.th}">Name</th>
