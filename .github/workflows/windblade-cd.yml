@@ -10,6 +10,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - uses: cachix/install-nix-action@v19
         with:
@@ -43,5 +45,3 @@ jobs:
           add: windblade
           message: Deploy windblade
           commit: --allow-empty
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
