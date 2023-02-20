@@ -18,15 +18,15 @@ jobs:
         with:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
 
-      - run: git clone --recurse-submodules https://github.com/StarLederer/windblade.git
+      - run: git clone --recurse-submodules https://github.com/StarLederer/windblade.git .tmp
 
       - name: Build
         uses: rrbutani/use-nix-shell-action@v1
         with:
-          devShell: ./windblade#
+          devShell: ./.tmp#
           exportEnv: false
           script: |
-            cd windblade
+            cd .tmp
             ls
             ls brand
             cd unocss
@@ -38,14 +38,11 @@ jobs:
 
       - name: Copy artifacts
         run: |
-          rm -rf www/windblade
-          mv -f windblade/docs/dist www/windblade
+          rm -rf windblade
+          mv -f .tmp/docs/dist windblade
 
       - uses: EndBug/add-and-commit@v9
         with:
           add: www
           message: Deploy
           commit: --allow-empty
-          push: false
-
-      - run: git subtree push --prefix www origin www

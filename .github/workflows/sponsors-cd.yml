@@ -23,20 +23,17 @@ jobs:
       - name: Build
         uses: rrbutani/use-nix-shell-action@v1
         with:
-          devShell: ./sponsors#
+          devShell: ./.builders/sponsors#
           exportEnv: false
           script: |
             export SPONSORKIT_GITHUB_TOKEN=${{ secrets.PROFILE_TOKEN }}
             export SPONSORKIT_GITHUB_LOGIN=StarLederer
-            cd sponsors
+            cd .builders/sponsors
             pnpm i
             pnpm run build
 
       - uses: EndBug/add-and-commit@v9
         with:
-          add: www
-          message: Deploy
+          add: sponsors
+          message: Deploy sponsors
           commit: --allow-empty
-          push: false
-
-      - run: git subtree push --prefix www origin www
