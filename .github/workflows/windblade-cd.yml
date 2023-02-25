@@ -28,7 +28,7 @@ jobs:
             cd .tmp
             ls
             ls brand
-            cd unocss
+            cd unocss-preset
             pnpm i
             pnpm run build
             cd ../docs
