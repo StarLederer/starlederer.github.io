@@ -36,3 +36,5 @@ jobs:
           add: sponsors
           message: Deploy sponsors
           commit: --allow-empty
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
