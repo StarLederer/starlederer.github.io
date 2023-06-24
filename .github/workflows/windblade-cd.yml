@@ -34,7 +34,7 @@ jobs:
       - name: Copy artifacts
         run: |
           rm -rf windblade
-          mv -f .tmp/docs/dist windblade
+          mv -f .tmp/packages/website/dist windblade
 
       - uses: EndBug/add-and-commit@v9
         with:
