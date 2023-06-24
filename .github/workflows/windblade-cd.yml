@@ -26,13 +26,9 @@ jobs:
           exportEnv: false
           script: |
             cd .tmp
-            ls
-            ls brand
-            cd unocss-preset
             pnpm i
             pnpm run build
-            cd ../docs
-            pnpm i
+            cd packages/website
             pnpm run build
 
       - name: Copy artifacts
